@@ -7,6 +7,10 @@ coffee_maker = CoffeeMaker()
 money_machine = MoneyMachine()
 while True:
     choice = input(f"Qual a sua escolha? , {menu.get_items()}")
+    if choice == "report":
+        money_machine.report()
+    if choice == "resources":
+        coffee_maker.report()
     my_coffee = menu.find_drink(choice)
     if my_coffee is not None:
         my_coffe_price = my_coffee.cost
